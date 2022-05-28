@@ -10,7 +10,7 @@ import UIKit
 
 class Ticket: NSObject {
     
-    var _id: String;
+    var _id: String;     
     
     init(id: String){
         self._id = id;

@@ -11,17 +11,21 @@ import UIKit
 class Event: NSObject {
     
     var _id: Int;
+    var _title: String
     var _orgName: String;
     var _local: String;
     var _time: String;
     var _numberOfTickets: Int;
+    var _valueOfTicket: Double;
     
-    init(id: Int, orgName: String, local: String, time: String, numberOfTickets: Int){
+    init(id: Int, title: String, orgName: String, local: String, time: String, numberOfTickets: Int, valueOfTicket: Double){
         self._id = id;
+        self._title = title;
         self._orgName = orgName;
         self._local = local;
         self._time = time;
         self._numberOfTickets = numberOfTickets;
+        self._valueOfTicket = valueOfTicket;
     }
     
     func getId() -> Int{

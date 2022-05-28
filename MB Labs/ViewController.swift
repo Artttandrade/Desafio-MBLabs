@@ -10,7 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @
+    
+    let emailTest: String = "adsa@gmail.com";
+    let passwordTest: String = "1234";
+    
+    @IBOutlet var emailTextField: UITextField?;
+    @IBOutlet var passwordTextField: UITextField?;
+    
+    @IBAction func auth(){
+        guard let email = emailTextField?.text else {
+            return;
+        }
+        guard let password = passwordTextField?.text else {
+            return;
+        }
+        
+        if (email == email && password == passwordTest) {
+            print("Corret credentials");
+        } else {
+            print("Wrong credentials");
+            return;
+        }
+    }
+    //@IBOutlet var currentValueTextField: UITextField?;
 
     override func viewDidLoad() {
         super.viewDidLoad()
