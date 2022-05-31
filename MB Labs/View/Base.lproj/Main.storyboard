@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z1u-hG-f1K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GaX-wf-evf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -37,13 +37,16 @@
                                 <state key="normal" title="Entrar"/>
                                 <connections>
                                     <action selector="auth" destination="BYZ-38-t0r" eventType="touchUpInside" id="mLl-X5-tWo"/>
-                                    <segue destination="rxi-R3-QcL" kind="show" id="rAu-e3-TbI"/>
+                                    <segue destination="CmJ-20-4UP" kind="show" id="iJC-d9-uQ9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfg-0p-LPB">
                                 <rect key="frame" x="182" y="550" width="68" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cadastrar"/>
+                                <connections>
+                                    <segue destination="Z1u-hG-f1K" kind="show" id="EJR-Yd-Uwk"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ainda nao possui cadastro?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shW-VX-xBk">
                                 <rect key="frame" x="20" y="488" width="388" height="38"/>
@@ -87,7 +90,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wef-Bv-GSy">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="eventCell" rowHeight="130" id="qVN-M7-AVe" customClass="eventTableViewCell" customModule="MB_Labs" customModuleProvider="target">
@@ -165,6 +168,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Hx-FR-SYq"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Eventos" id="htZ-je-qXO"/>
                     <navigationItem key="navigationItem" id="8Nd-4h-y8r"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
@@ -173,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vhw-iK-JPu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1917.3913043478262" y="-1115.625"/>
+            <point key="canvasLocation" x="-1145" y="-1126"/>
         </scene>
         <!--Event Screen View Controller-->
         <scene sceneID="jwG-WI-rel">
@@ -399,57 +403,26 @@
             </objects>
             <point key="canvasLocation" x="2206" y="-1081"/>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="wPI-EV-tsf">
-            <objects>
-                <viewController id="DeA-Cf-hT7" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="phU-kG-Ifz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="GHF-oX-wtm"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="IsW-sW-ydU"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QeA-8a-OYr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="493" y="192"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="NDc-Ls-ADu">
-            <objects>
-                <viewController id="zED-LA-hXM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="h8h-QC-eGt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="RHk-7B-5Xm"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="x5B-e2-W4V"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ndD-5f-gtj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1551" y="192"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="p5F-kx-F4m">
             <objects>
                 <tabBarController id="CmJ-20-4UP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="I38-Ac-5Fr"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m93-K8-Cqh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="zED-LA-hXM" kind="relationship" relationship="viewControllers" id="CHu-2J-Jrh"/>
-                        <segue destination="DeA-Cf-hT7" kind="relationship" relationship="viewControllers" id="wxO-vg-BXN"/>
+                        <segue destination="rxi-R3-QcL" kind="relationship" relationship="viewControllers" id="5Sc-P9-GML"/>
+                        <segue destination="W0y-Z9-8hH" kind="relationship" relationship="viewControllers" id="yRT-od-4Xy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGZ-up-9pi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2313" y="-175"/>
+            <point key="canvasLocation" x="-1942" y="-1126"/>
         </scene>
-        <!--List Ticket View Controller-->
+        <!--Meus Ingressos-->
         <scene sceneID="9Vf-uj-qvG">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SW8-0P-JWy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -459,7 +432,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dTg-fq-boh">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ticketCell" rowHeight="150" id="p9n-S6-aKj" customClass="ticketTableViewCell" customModule="MB_Labs" customModuleProvider="target">
@@ -522,6 +495,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ez3-VX-O4R"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Meus Ingressos" id="msa-J0-kqk"/>
                     <connections>
                         <outlet property="ticketTableView" destination="dTg-fq-boh" id="l4P-2P-9LZ"/>
                     </connections>
@@ -567,6 +541,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="BJZ-iM-EEv"/>
                     </view>
+                    <navigationItem key="navigationItem" id="NeB-aD-jzB"/>
                     <connections>
                         <outlet property="emailTextField" destination="Jj6-H2-EJo" id="8kJ-0w-BWw"/>
                         <outlet property="passwordAgainTextField" destination="IQc-Tk-2kQ" id="E9X-OF-hyN"/>
