@@ -10,6 +10,8 @@ import UIKit
 
 class EventScreenViewController: UIViewController {
     
+    var event: Event?;
+    
     var numberOfTicketsToBuy: Int = 0;
     
     @IBOutlet var titleLabel: UILabel?;
@@ -35,21 +37,21 @@ class EventScreenViewController: UIViewController {
         }
         
         print( "\(numberOfTicketsToBuy) tickets buyed");
-        
+        navigationController?.popViewController(animated: true)
         return;
-        
-        
     }
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        titleLabel?.text! += "\(event!._title)"
+        orgnameLabel?.text! += "\(event!._orgName)";
+        timeLabel?.text! += "\(event!._time)"
+        localLabel?.text! += "\(event!._local)"
+        dateLabel?.text! += "\(event!._day)";
+        valueOfTicketLabel?.text! += "\(event!._valueOfTicket)";
+        numberOfTicketsLabel?.text! += "\(event!._numberOfTickets)";
         
-        if let titulo = titleLabel?.text {
-            titleLabel?.text = "\(titulo): Idade da pedra";
-        }
 
         // Do any additional setup after loading the view.
     }

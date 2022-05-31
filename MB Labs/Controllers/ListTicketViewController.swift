@@ -17,12 +17,12 @@ class ListTicketViewController: UIViewController, UITableViewDelegate, UITableVi
     ];
     
     let listOfEvents: Array<Event> = [
-        Event(id: 1, title: "Jogos olimpicos", orgName: "La Salle", local: "La Salle", time: "19h", numberOfTickets: 100, valueOfTicket: 20),
-        Event(id: 2, title: "Observatorio", orgName: "UFAM", local: "Mini Campus", time: "21h", numberOfTickets: 150, valueOfTicket: 10),
-        Event(id: 3, title: "Feira de Tecnologia", orgName: "Samsung", local: "Studio 5", time: "18h", numberOfTickets: 100, valueOfTicket: 100),
-        Event(id: 4, title: "Feira de Pesquisa", orgName: "Insituto Eldorado", local: "Manauara", time: "19h", numberOfTickets: 80, valueOfTicket: 90),
-        Event(id: 5, title: "Evento de Empreendedorismo", orgName: "UEA", local: "Ocean", time: "20h30", numberOfTickets: 100, valueOfTicket: 40),
-        Event(id: 6, title: "Olimpiada de Robos", orgName: "UFAM", local: "FT", time: "19h", numberOfTickets: 150, valueOfTicket: 20)
+        Event(id: 1, title: "Jogos olimpicos", orgName: "La Salle", local: "La Salle", time: "19h", numberOfTickets: 100, valueOfTicket: 20, day: "12/03"),
+        Event(id: 2, title: "Observatorio", orgName: "UFAM", local: "Mini Campus", time: "21h", numberOfTickets: 150, valueOfTicket: 10, day: "12/03"),
+        Event(id: 3, title: "Feira de Tecnologia", orgName: "Samsung", local: "Studio 5", time: "18h", numberOfTickets: 100, valueOfTicket: 100, day: "12/03"),
+        Event(id: 4, title: "Feira de Pesquisa", orgName: "Insituto Eldorado", local: "Manauara", time: "19h", numberOfTickets: 80, valueOfTicket: 90, day: "12/03"),
+        Event(id: 5, title: "Evento de Empreendedorismo", orgName: "UEA", local: "Ocean", time: "20h30", numberOfTickets: 100, valueOfTicket: 40, day: "12/03"),
+        Event(id: 6, title: "Olimpiada de Robos", orgName: "UFAM", local: "FT", time: "19h", numberOfTickets: 150, valueOfTicket: 20, day: "12/03")
     ];
     
     
@@ -52,6 +52,19 @@ class ListTicketViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listOfTickets.count;
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //guard let cell = tableView.cellForRow(at: indexPath) else { return }
+        
+        let story : UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        let result = story.instantiateViewController(withIdentifier: "TicketViewController") as! TicketViewController;
+        
+        result.ticket = listOfTickets[indexPath.row];
+        
+        navigationController?.pushViewController(result, animated: true);
+        
+        print("\(listOfEvents[indexPath.row]._title)");
     }
     
 

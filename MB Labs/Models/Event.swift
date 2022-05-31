@@ -15,15 +15,17 @@ class Event: NSObject {
     var _orgName: String;
     var _local: String;
     var _time: String;
+    var _day: String;
     var _numberOfTickets: Int;
     var _valueOfTicket: Double;
     
-    init(id: Int, title: String, orgName: String, local: String, time: String, numberOfTickets: Int, valueOfTicket: Double){
+    init(id: Int, title: String, orgName: String, local: String, time: String, numberOfTickets: Int, valueOfTicket: Double, day: String){
         self._id = id;
         self._title = title;
         self._orgName = orgName;
         self._local = local;
         self._time = time;
+        self._day = day;
         self._numberOfTickets = numberOfTickets;
         self._valueOfTicket = valueOfTicket;
     }

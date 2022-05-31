@@ -10,6 +10,8 @@ import UIKit
 
 class TicketViewController: UIViewController {
     
+    var ticket: Ticket?;
+    
     @IBOutlet var titleLabel: UILabel?;
     @IBOutlet var orgnameLabel: UILabel?;
     @IBOutlet var timeLabel: UILabel?;
@@ -17,10 +19,20 @@ class TicketViewController: UIViewController {
     @IBOutlet var dateLabel: UILabel?;
     @IBOutlet var valueOfTicketLabel: UILabel?;
     @IBOutlet var numberOfTicketsLabel: UILabel?;
+    @IBOutlet var codeLabel: UILabel?;
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        titleLabel?.text! += "\(ticket!.event!._title)"
+        orgnameLabel?.text! += "\(ticket!.event!._orgName)";
+        timeLabel?.text! += "\(ticket!.event!._time)"
+        localLabel?.text! += "\(ticket!.event!._local)"
+        dateLabel?.text! += "\(ticket!.event!._day)";
+        valueOfTicketLabel?.text! += "\(ticket!.event!._valueOfTicket)";
+        numberOfTicketsLabel?.text! += "\(ticket!._numberOfTickets)";
+        codeLabel?.text! += "\(ticket!._code)";
 
         // Do any additional setup after loading the view.
     }

@@ -157,9 +157,9 @@
 			children = (
 				AF51A68728409A2600AA26D8 /* LoginViewController.swift */,
 				AF5924E42841F1A6002762D9 /* ListEventsViewController.swift */,
+				AF58513028454F5C003DD335 /* ListTicketViewController.swift */,
 				AF8656DB2845162200698D74 /* EventScreenViewController.swift */,
 				AF58512E28454A28003DD335 /* TicketViewController.swift */,
-				AF58513028454F5C003DD335 /* ListTicketViewController.swift */,
 				AF5924E62841F463002762D9 /* eventTableViewCell.swift */,
 				AF5851322845530C003DD335 /* ticketTableViewCell.swift */,
 				AF6BE9C92845CF1600B6A1DA /* CadastroViewController.swift */,
