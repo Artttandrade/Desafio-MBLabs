@@ -10,10 +10,15 @@ import UIKit
 
 class Ticket: NSObject {
     
-    var _id: String;     
+    var _id: Int;
+    var _code: String
+    var _numberOfTickets: Int;
+    var event: Event?;
     
-    init(id: String){
+    init(id: Int, numberOfTickets: Int, code: String){
         self._id = id;
+        self._numberOfTickets = numberOfTickets;
+        self._code = code;
     }
 
 }

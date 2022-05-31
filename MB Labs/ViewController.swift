@@ -27,8 +27,13 @@ class ViewController: UIViewController {
         
         if (email == email && password == passwordTest) {
             print("Corret credentials");
+            let tabNavigationController = ListEventsViewController();
+            // let tabNavigationController = UITabBarController();
+            
+            navigationController?.pushViewController(tabNavigationController, animated: true)
         } else {
             print("Wrong credentials");
+            
             return;
         }
     }

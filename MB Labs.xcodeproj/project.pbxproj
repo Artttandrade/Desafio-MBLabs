@@ -19,9 +19,13 @@
 		AF51A68C28409C2800AA26D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51A68B28409C2800AA26D8 /* User.swift */; };
 		AF51A68E28409C5500AA26D8 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51A68D28409C5500AA26D8 /* Event.swift */; };
 		AF51A69028409C6000AA26D8 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51A68F28409C6000AA26D8 /* Ticket.swift */; };
-		AF5924E32841E9D7002762D9 /* ListEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5924E22841E9D7002762D9 /* ListEventsTableViewController.swift */; };
+		AF58512F28454A28003DD335 /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58512E28454A28003DD335 /* TicketViewController.swift */; };
+		AF58513128454F5C003DD335 /* ListTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58513028454F5C003DD335 /* ListTicketViewController.swift */; };
+		AF5851332845530C003DD335 /* ticketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5851322845530C003DD335 /* ticketTableViewCell.swift */; };
 		AF5924E52841F1A6002762D9 /* ListEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5924E42841F1A6002762D9 /* ListEventsViewController.swift */; };
 		AF5924E72841F463002762D9 /* eventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5924E62841F463002762D9 /* eventTableViewCell.swift */; };
+		AF6BE9CA2845CF1600B6A1DA /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6BE9C92845CF1600B6A1DA /* CadastroViewController.swift */; };
+		AF8656DC2845162200698D74 /* EventScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8656DB2845162200698D74 /* EventScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +64,13 @@
 		AF51A68B28409C2800AA26D8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF51A68D28409C5500AA26D8 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		AF51A68F28409C6000AA26D8 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
-		AF5924E22841E9D7002762D9 /* ListEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsTableViewController.swift; sourceTree = "<group>"; };
+		AF58512E28454A28003DD335 /* TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewController.swift; sourceTree = "<group>"; };
+		AF58513028454F5C003DD335 /* ListTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTicketViewController.swift; sourceTree = "<group>"; };
+		AF5851322845530C003DD335 /* ticketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ticketTableViewCell.swift; sourceTree = "<group>"; };
 		AF5924E42841F1A6002762D9 /* ListEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsViewController.swift; sourceTree = "<group>"; };
 		AF5924E62841F463002762D9 /* eventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventTableViewCell.swift; sourceTree = "<group>"; };
+		AF6BE9C92845CF1600B6A1DA /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		AF8656DB2845162200698D74 /* EventScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,11 +122,11 @@
 			isa = PBXGroup;
 			children = (
 				AF51A68A28409BF200AA26D8 /* Models */,
+				AF63AB742842A8FC00E57239 /* View */,
+				AF51A68928409A3300AA26D8 /* Controllers */,
 				AF51A6572840948700AA26D8 /* AppDelegate.swift */,
 				AF51A6592840948700AA26D8 /* SceneDelegate.swift */,
 				AF51A65B2840948700AA26D8 /* ViewController.swift */,
-				AF51A68928409A3300AA26D8 /* Controllers */,
-				AF51A65D2840948700AA26D8 /* Main.storyboard */,
 				AF51A6602840948900AA26D8 /* Assets.xcassets */,
 				AF51A6622840948900AA26D8 /* LaunchScreen.storyboard */,
 				AF51A6652840948900AA26D8 /* Info.plist */,
@@ -148,9 +156,13 @@
 			isa = PBXGroup;
 			children = (
 				AF51A68728409A2600AA26D8 /* LoginViewController.swift */,
-				AF5924E22841E9D7002762D9 /* ListEventsTableViewController.swift */,
 				AF5924E42841F1A6002762D9 /* ListEventsViewController.swift */,
+				AF8656DB2845162200698D74 /* EventScreenViewController.swift */,
+				AF58512E28454A28003DD335 /* TicketViewController.swift */,
+				AF58513028454F5C003DD335 /* ListTicketViewController.swift */,
 				AF5924E62841F463002762D9 /* eventTableViewCell.swift */,
+				AF5851322845530C003DD335 /* ticketTableViewCell.swift */,
+				AF6BE9C92845CF1600B6A1DA /* CadastroViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -163,6 +175,14 @@
 				AF51A68F28409C6000AA26D8 /* Ticket.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AF63AB742842A8FC00E57239 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF51A65D2840948700AA26D8 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,11 +320,15 @@
 				AF51A65C2840948700AA26D8 /* ViewController.swift in Sources */,
 				AF51A6582840948700AA26D8 /* AppDelegate.swift in Sources */,
 				AF51A68C28409C2800AA26D8 /* User.swift in Sources */,
+				AF58513128454F5C003DD335 /* ListTicketViewController.swift in Sources */,
+				AF6BE9CA2845CF1600B6A1DA /* CadastroViewController.swift in Sources */,
 				AF5924E52841F1A6002762D9 /* ListEventsViewController.swift in Sources */,
 				AF51A68E28409C5500AA26D8 /* Event.swift in Sources */,
+				AF5851332845530C003DD335 /* ticketTableViewCell.swift in Sources */,
 				AF5924E72841F463002762D9 /* eventTableViewCell.swift in Sources */,
 				AF51A69028409C6000AA26D8 /* Ticket.swift in Sources */,
-				AF5924E32841E9D7002762D9 /* ListEventsTableViewController.swift in Sources */,
+				AF58512F28454A28003DD335 /* TicketViewController.swift in Sources */,
+				AF8656DC2845162200698D74 /* EventScreenViewController.swift in Sources */,
 				AF51A65A2840948700AA26D8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

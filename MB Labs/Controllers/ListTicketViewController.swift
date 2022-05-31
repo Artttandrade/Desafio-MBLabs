@@ -1,14 +1,20 @@
 //
-//  ListEventsViewController.swift
+//  ListTicketViewController.swift
 //  MB Labs
 //
-//  Created by Convidados on 28/05/22.
+//  Created by Convidados on 30/05/22.
 //  Copyright © 2022 Convidados. All rights reserved.
 //
 
 import UIKit
 
-class ListEventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ListTicketViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var ticketTableView: UITableView!
+    let listOfTickets: Array<Ticket> = [
+        Ticket(id: 0, numberOfTickets: 1, code: "adsa2"),
+        Ticket(id: 1, numberOfTickets: 1, code: "adsa2")
+    ];
     
     let listOfEvents: Array<Event> = [
         Event(id: 1, title: "Jogos olimpicos", orgName: "La Salle", local: "La Salle", time: "19h", numberOfTickets: 100, valueOfTicket: 20),
@@ -18,34 +24,35 @@ class ListEventsViewController: UIViewController, UITableViewDelegate, UITableVi
         Event(id: 5, title: "Evento de Empreendedorismo", orgName: "UEA", local: "Ocean", time: "20h30", numberOfTickets: 100, valueOfTicket: 40),
         Event(id: 6, title: "Olimpiada de Robos", orgName: "UFAM", local: "FT", time: "19h", numberOfTickets: 150, valueOfTicket: 20)
     ];
+    
+    
+    
+    
 
-    
-    @IBOutlet weak var eventsTableView: UITableView!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("LisOfEvents")
-
+        
+        
+        listOfTickets[0].event = listOfEvents[0]
+        listOfTickets[1].event = listOfEvents[1]
         // Do any additional setup after loading the view.
-    }
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listOfEvents.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! eventTableViewCell;
+        print("aqui")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ticketCell", for: indexPath) as! ticketTableViewCell;
         
-        cell.configure(title: listOfEvents[indexPath.row]._title, local: listOfEvents[indexPath.row]._local, time: listOfEvents[indexPath.row]._time)
-        //let event = listOfEvents[indexPath.row];
-        //cell.textLabel?.text = event._title;
+        
+        cell.configure(title: listOfTickets[indexPath.row].event!._title, local: listOfTickets[indexPath.row].event!._local, time: listOfTickets[indexPath.row].event!._time);
+        
+        
         return cell;
     }
     
-    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listOfTickets.count;
+    }
     
 
     /*

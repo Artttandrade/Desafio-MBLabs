@@ -1,17 +1,17 @@
 //
-//  eventTableViewCell.swift
+//  ticketTableViewCell.swift
 //  MB Labs
 //
-//  Created by Convidados on 28/05/22.
+//  Created by Convidados on 30/05/22.
 //  Copyright © 2022 Convidados. All rights reserved.
 //
 
 import UIKit
 
-class eventTableViewCell: UITableViewCell {
-
+class ticketTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var eventCellView: UIView!
+    
+    @IBOutlet weak var ticketCellView: UIView!
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var localLabel: UILabel!
@@ -23,11 +23,12 @@ class eventTableViewCell: UITableViewCell {
         localLabel.text! += local;
         timeLabel.text! += time;
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
